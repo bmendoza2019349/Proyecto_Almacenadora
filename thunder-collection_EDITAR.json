@@ -1,0 +1,28 @@
+{
+    "clientName": "Thunder Client",
+    "collectionName": "EDITAR",
+    "collectionId": "e3f8d27e-902f-47f0-99aa-ce4885c6cc28",
+    "dateExported": "2024-04-23T23:23:41.792Z",
+    "version": "1.2",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "5e53c972-e210-46fb-b5da-be5e8ce55513",
+            "colId": "e3f8d27e-902f-47f0-99aa-ce4885c6cc28",
+            "containerId": "",
+            "name": "editarTarea",
+            "url": "http://127.0.0.1:8080/api_Almacenadora/v1/tareas/editar/662840e2633fb9768c4f3e6b",
+            "method": "PUT",
+            "sortNum": 10000,
+            "created": "2024-04-23T23:23:19.793Z",
+            "modified": "2024-04-23T23:23:19.793Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\r\n  \"nombre\": \"Edit\",\r\n  \"descripcion\": \"12345\",\r\n  \"fechaInicio\": \"2024-04-23T00:00:00.000Z\",\r\n  \"fechaFinal\": \"2024-04-23T11:00:00.000Z\",\r\n  \"estado\": \"terminado\",\r\n  \"persona\": \"gonzales\"\r\n}",
+                "form": []
+            }
+        }
+    ],
+    "ref": "yIyrx6M3UzJ_X5RT9NJz53_gai16NlAJSb-VdvCcYOviwqZf3I-okTJfU4bX_t_dXYsBZXw6CYVMy1AMzKNWEQ"
+}
