@@ -1,8 +1,8 @@
 import { Router } from "express";
 import { check } from "express-validator";
-import { crearTarea } from "./tarea.controller.js"
+import { crearTarea, editarTarea } from "./tarea.controller.js"
 import { validarCampos } from "../middlewares/validar-campos.js";
-
+import {buscarTareaPorId } from '../helpers/db-validators.js'
 const router = Router();
 
 router.post(
@@ -16,5 +16,15 @@ router.post(
         check('persona', 'El nombre completo de la persona es obligatorio').not().isEmpty(),
         validarCampos,
     ], crearTarea);
+
+router.put(
+    "/editar/:id",
+    [
+        check("id", "Id no valido").isMongoId(),
+        check('id').custom(buscarTareaPorId),
+        validarCampos,
+    ], 
+    editarTarea
+);
 
 export default router;
