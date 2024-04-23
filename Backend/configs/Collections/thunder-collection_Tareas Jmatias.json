@@ -1,0 +1,61 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "Tareas Jmatias",
+    "dateExported": "2024-04-23T23:44:10.902Z",
+    "version": "1.1",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "ab25a333-8533-4104-92bc-9de31a6451e7",
+            "colId": "891eef4a-53bd-400a-8dcd-3b52d54db03d",
+            "containerId": "",
+            "name": "postTarea",
+            "url": "http://localhost:8080/api_Almacenadora/v1/tareas/agregar",
+            "method": "POST",
+            "sortNum": 10000,
+            "created": "2024-04-23T23:08:14.720Z",
+            "modified": "2024-04-23T23:35:16.906Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"nombre\":\"Tarea\",\n  \"descripcion\":\"hola\",\n  \"fechaInicio\":\"2\",\n  \"fechaFinal\":\"3\",\n  \"persona\":\"Jose\"\n\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "76dd6481-a115-487b-89ff-8edb25d01b49",
+            "colId": "891eef4a-53bd-400a-8dcd-3b52d54db03d",
+            "containerId": "",
+            "name": "editarEstado",
+            "url": "http://localhost:8080/api_Almacenadora/v1/tareas/editarEstado/662845c3d1f3c628dd900e46",
+            "method": "PUT",
+            "sortNum": 20000,
+            "created": "2024-04-23T23:36:13.623Z",
+            "modified": "2024-04-23T23:42:55.639Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"_id\":\"662845c3d1f3c628dd900e46\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "9e41f629-2312-4206-a473-d71c01b450f7",
+            "colId": "891eef4a-53bd-400a-8dcd-3b52d54db03d",
+            "containerId": "",
+            "name": "listarTarea",
+            "url": "http://localhost:8080/api_Almacenadora/v1/tareas/listar",
+            "method": "GET",
+            "sortNum": 30000,
+            "created": "2024-04-23T23:37:41.504Z",
+            "modified": "2024-04-23T23:41:19.472Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        }
+    ]
+}
