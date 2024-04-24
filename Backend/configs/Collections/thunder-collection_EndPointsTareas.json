@@ -1,0 +1,91 @@
+{
+    "clientName": "Thunder Client",
+    "collectionName": "EndPointsTareas",
+    "collectionId": "a8be511e-09f0-4887-8177-7b4877c9b29e",
+    "dateExported": "2024-04-24T00:02:53.623Z",
+    "version": "1.2",
+    "folders": [
+        {
+            "_id": "becf6238-46d7-496a-8b77-21eef036abbd",
+            "name": "Agregar",
+            "containerId": "",
+            "created": "2024-04-23T23:59:02.756Z",
+            "sortNum": 10000
+        },
+        {
+            "_id": "074464e8-8e7b-439a-9b07-9cc93b9e0651",
+            "name": "Buscar",
+            "containerId": "",
+            "created": "2024-04-23T23:59:10.507Z",
+            "sortNum": 20000
+        },
+        {
+            "_id": "ce65cd74-5144-46a5-bc86-8d8a030a3b4f",
+            "name": "Editar",
+            "containerId": "",
+            "created": "2024-04-23T23:59:17.844Z",
+            "sortNum": 30000
+        }
+    ],
+    "requests": [
+        {
+            "_id": "56988993-95ab-4eac-bc1e-5bfc644dcbac",
+            "colId": "a8be511e-09f0-4887-8177-7b4877c9b29e",
+            "containerId": "becf6238-46d7-496a-8b77-21eef036abbd",
+            "name": "agregarTarea",
+            "url": "http://127.0.0.1:8080/api_Almacenadora/v1/tareas/agregar",
+            "method": "POST",
+            "sortNum": 10000,
+            "created": "2024-04-23T23:55:57.484Z",
+            "modified": "2024-04-23T23:56:00.676Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"nombre\": \"Limpiar bandas\",\n  \"descripcion\": \"debe limpiar las bandas\",\n  \"fechaInicio\": \"2024-04-23T08:00:00\",\n  \"fechaFinal\": \"2024-04-23T17:30:00\",\n  \"estado\": \"sin iniciar\",\n  \"persona\": \"jose sagastume\"\n}",
+                "form": []
+            }
+        },
+        {
+            "_id": "b7cb0767-0d25-4439-a91e-bf407ea89c06",
+            "colId": "a8be511e-09f0-4887-8177-7b4877c9b29e",
+            "containerId": "ce65cd74-5144-46a5-bc86-8d8a030a3b4f",
+            "name": "editarTarea",
+            "url": "http://127.0.0.1:8080/api_Almacenadora/v1/tareas/editar/66284aff58d298ec6b9584df",
+            "method": "PUT",
+            "sortNum": 10000,
+            "created": "2024-04-23T23:59:20.050Z",
+            "modified": "2024-04-23T23:59:20.050Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"nombre\": \"Edit\",\n  \"descripcion\": \"12345\",\n  \"fechaInicio\": \"2024-04-23T00:00:00.000Z\",\n  \"fechaFinal\": \"2024-04-23T11:00:00.000Z\",\n  \"estado\": \"terminado\",\n  \"persona\": \"gonzales\"\n}",
+                "form": []
+            }
+        },
+        {
+            "_id": "5a86f788-620b-495e-888c-18e7193fd404",
+            "colId": "a8be511e-09f0-4887-8177-7b4877c9b29e",
+            "containerId": "074464e8-8e7b-439a-9b07-9cc93b9e0651",
+            "name": "listarTareas",
+            "url": "http://127.0.0.1:8080/api_Almacenadora/v1/tareas/listar",
+            "method": "GET",
+            "sortNum": 20000,
+            "created": "2024-04-24T00:00:20.069Z",
+            "modified": "2024-04-24T00:00:26.898Z",
+            "headers": []
+        },
+        {
+            "_id": "4c603f56-a0e3-4cf8-9535-3fe65c279335",
+            "colId": "a8be511e-09f0-4887-8177-7b4877c9b29e",
+            "containerId": "ce65cd74-5144-46a5-bc86-8d8a030a3b4f",
+            "name": "cambiarEstado",
+            "url": "http://127.0.0.1:8080/api_Almacenadora/v1/tareas/editarEstado/66284aff58d298ec6b9584df",
+            "method": "PUT",
+            "sortNum": 30000,
+            "created": "2024-04-24T00:01:39.751Z",
+            "modified": "2024-04-24T00:02:28.834Z",
+            "headers": []
+        }
+    ],
+    "ref": "eSh_Xr2k_Ci-9S8BQnwK1-HLitElWbuSfwKq3cS8hbcYUcNboMIkYp6V_Ttm8rxtNy0yqRsclAz173R6ZQzEmw"
+}
