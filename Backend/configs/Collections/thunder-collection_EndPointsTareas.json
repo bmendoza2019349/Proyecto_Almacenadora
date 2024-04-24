@@ -2,7 +2,7 @@
     "clientName": "Thunder Client",
     "collectionName": "EndPointsTareas",
     "collectionId": "a8be511e-09f0-4887-8177-7b4877c9b29e",
-    "dateExported": "2024-04-24T00:02:53.623Z",
+    "dateExported": "2024-04-24T03:36:22.409Z",
     "version": "1.2",
     "folders": [
         {
@@ -25,6 +25,13 @@
             "containerId": "",
             "created": "2024-04-23T23:59:17.844Z",
             "sortNum": 30000
+        },
+        {
+            "_id": "46d7451a-9bc3-4f3c-a9fb-1e7bedd0e06d",
+            "name": "Eliminar",
+            "containerId": "",
+            "created": "2024-04-24T03:21:16.777Z",
+            "sortNum": 40000
         }
     ],
     "requests": [
@@ -85,7 +92,24 @@
             "created": "2024-04-24T00:01:39.751Z",
             "modified": "2024-04-24T00:02:28.834Z",
             "headers": []
+        },
+        {
+            "_id": "33427057-bf37-4ba4-b62d-003ee3545a11",
+            "colId": "a8be511e-09f0-4887-8177-7b4877c9b29e",
+            "containerId": "46d7451a-9bc3-4f3c-a9fb-1e7bedd0e06d",
+            "name": "eliminarTarea",
+            "url": "http://127.0.0.1:8080/api_Almacenadora/v1/tareas/eliminar",
+            "method": "DELETE",
+            "sortNum": 40000,
+            "created": "2024-04-24T03:21:26.135Z",
+            "modified": "2024-04-24T03:28:29.185Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"creador\":\"gonzales\",\n  \"id\":\"66284aff58d298ec6b9584df\"\n  \n}",
+                "form": []
+            }
         }
     ],
-    "ref": "eSh_Xr2k_Ci-9S8BQnwK1-HLitElWbuSfwKq3cS8hbcYUcNboMIkYp6V_Ttm8rxtNy0yqRsclAz173R6ZQzEmw"
+    "ref": "eSh_Xr2k_Ci-9S8BQnwK12qrUZ4IvCas0uvgaf6ahuwfb13pbwTBeIi9puk0SUWuQfdvV0NgcrwOe3lTjmHSHQ"
 }
