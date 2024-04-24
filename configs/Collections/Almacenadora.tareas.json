@@ -1,0 +1,16 @@
+[{
+  "_id": {
+    "$oid": "662869556904ff9b58b5c0ff"
+  },
+  "nombre": "Edit",
+  "descripcion": "12345",
+  "fechaInicio": {
+    "$date": "2024-04-23T00:00:00.000Z"
+  },
+  "fechaFinal": {
+    "$date": "2024-04-23T11:00:00.000Z"
+  },
+  "estado": "terminado",
+  "persona": "gonzales",
+  "__v": 0
+}]
