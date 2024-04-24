@@ -1,7 +1,8 @@
 import { Router } from "express";
 import { check } from "express-validator";
-import { crearTarea } from "./tarea.controller.js"
+import { crearTarea, deleteTarea } from "./tarea.controller.js";
 import { validarCampos } from "../middlewares/validar-campos.js";
+import { validateCreator } from "../middlewares/validate-creator.js";
 
 const router = Router();
 
@@ -16,5 +17,13 @@ router.post(
         check('persona', 'El nombre completo de la persona es obligatorio').not().isEmpty(),
         validarCampos,
     ], crearTarea);
+
+router.delete(
+    "/eliminar",
+    [
+        check('id', 'El id es obligatorio').not().isEmpty(),
+        check('creador', 'El creador es obligatorio').not().isEmpty(),
+        validateCreator
+    ],deleteTarea);
 
 export default router;
