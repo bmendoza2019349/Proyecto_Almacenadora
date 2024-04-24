@@ -1,8 +1,9 @@
 import { Router } from "express";
 import { check } from "express-validator";
-import { crearTarea, editarTarea, cambiarEstadoTarea, mostrarTodasLasTareas } from "./tarea.controller.js"
+import { crearTarea, editarTarea, cambiarEstadoTarea, mostrarTodasLasTareas, deleteTarea  } from "./tarea.controller.js"
 import { validarCampos } from "../middlewares/validar-campos.js";
 import {buscarTareaPorId } from '../helpers/db-validators.js'
+import { validateCreator } from "../middlewares/validate-creator.js";
 
 const router = Router();
 
@@ -38,5 +39,13 @@ router.post(
         "/editarEstado/:id",
         [], cambiarEstadoTarea
     );
+
+    router.delete(
+        "/eliminar",
+        [
+            check('id', 'El id es obligatorio').not().isEmpty(),
+            check('creador', 'El creador es obligatorio').not().isEmpty(),
+            validateCreator
+        ],deleteTarea);
 
 export default router;

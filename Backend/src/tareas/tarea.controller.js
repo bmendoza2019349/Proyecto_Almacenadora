@@ -105,3 +105,17 @@ export const cambiarEstadoTarea = async (req, res) => {
         return res.status(500).send("No se pudo cambiar el estado de la tarea");
     }
 };
+
+export const deleteTarea = async(req, res) => {
+    try {
+        const {id, creador} = req.body;
+        const tarea = await Tarea.findById(id);
+
+        await Tarea.findByIdAndDelete(id);
+        res.status(200).json({
+            msg: 'The homework was deleted successfully.',
+        });
+    } catch (error) {
+        
+    }
+}
