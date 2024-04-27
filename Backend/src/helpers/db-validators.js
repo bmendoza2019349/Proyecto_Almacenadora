@@ -12,4 +12,3 @@ export const buscarTareaPorId = async (tareaId) => {
         throw new Error("Error al buscar la tarea");
     }
 };
-

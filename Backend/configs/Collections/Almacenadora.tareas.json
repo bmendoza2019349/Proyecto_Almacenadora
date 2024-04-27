@@ -1,16 +1,48 @@
 [{
-  "_id": {
-    "$oid": "662869556904ff9b58b5c0ff"
+    "_id": {
+      "$oid": "66272f1a33eebe488e760f72"
+    },
+    "nombre": "hacer cajas",
+    "descripcion": "debe armart todo tipo de cajas",
+    "fechaInicio": {
+      "$date": "2024-04-23T00:00:00.000Z"
+    },
+    "fechaFinal": {
+      "$date": "2024-04-23T00:00:00.000Z"
+    },
+    "estado": "sin iniciar",
+    "persona": "jorge gonzales",
+    "__v": 0
   },
-  "nombre": "Edit",
-  "descripcion": "12345",
-  "fechaInicio": {
-    "$date": "2024-04-23T00:00:00.000Z"
+  {
+    "_id": {
+      "$oid": "66272f3433eebe488e760f74"
+    },
+    "nombre": "limpiar productos",
+    "descripcion": "limpiar productos",
+    "fechaInicio": {
+      "$date": "2024-04-23T00:00:00.000Z"
+    },
+    "fechaFinal": {
+      "$date": "2024-04-23T00:00:00.000Z"
+    },
+    "estado": "sin iniciar",
+    "persona": "jorge gonzales",
+    "__v": 0
   },
-  "fechaFinal": {
-    "$date": "2024-04-23T11:00:00.000Z"
-  },
-  "estado": "terminado",
-  "persona": "gonzales",
-  "__v": 0
-}]
+  {
+    "_id": {
+      "$oid": "6627301533eebe488e760f76"
+    },
+    "nombre": "Limpiar bandas",
+    "descripcion": "debe limpiar las bandas",
+    "fechaInicio": {
+      "$date": "2024-04-23T14:00:00.000Z"
+    },
+    "fechaFinal": {
+      "$date": "2024-04-23T23:30:00.000Z"
+    },
+    "estado": "sin iniciar",
+    "persona": "jose sagastume",
+    "__v": 0
+  }]
