@@ -32,6 +32,35 @@ export const crearTarea = async (req, res) => {
     }
 };
 
+export const editarTarea = async (req, res) => {
+    try {
+        const { nombre, descripcion, fechaInicio, fechaFinal, estado, persona } = req.body;
+        const { id } = req.params;
+        const tarea = await Tarea.findById(id);
+
+    
+
+        if (nombre) tarea.nombre = nombre;
+        if (descripcion) tarea.descripcion = descripcion;
+        if (fechaInicio) tarea.fechaInicio = fechaInicio;
+        if (fechaFinal) tarea.fechaFinal = fechaFinal;
+        if (estado) tarea.estado = estado;
+        if (persona) tarea.persona = persona;
+
+        
+        await tarea.save();
+
+        return res.status(200).json({
+            msg: "Tarea actualizada correctamente",
+            tarea
+        });
+    } catch (e) {
+        console.log(e);
+        return res.status(500).send("No se pudo actualizar la tarea");
+    }
+};
+
+
 export const mostrarTodasLasTareas = async (req, res) => {
     try {
         const tareas = await Tarea.find();
@@ -77,3 +106,17 @@ export const cambiarEstadoTarea = async (req, res) => {
         return res.status(500).send("No se pudo cambiar el estado de la tarea");
     }
 };
+
+export const deleteTarea = async(req, res) => {
+    try {
+        const {id, creador} = req.body;
+        const tarea = await Tarea.findById(id);
+
+        await Tarea.findByIdAndDelete(id);
+        res.status(200).json({
+            msg: 'The homework was deleted successfully.',
+        });
+    } catch (error) {
+        
+    }
+}

@@ -1,7 +1,10 @@
 import { Router } from "express";
 import { check } from "express-validator";
-import { crearTarea, cambiarEstadoTarea, mostrarTodasLasTareas } from "./tarea.controller.js"
-import { validarCampos,  } from "../middlewares/validar-campos.js";
+import { validarCampos, } from "../middlewares/validar-campos.js";
+import { crearTarea, editarTarea, cambiarEstadoTarea, mostrarTodasLasTareas, deleteTarea } from "./tarea.controller.js"
+import { validarCampos } from "../middlewares/validar-campos.js";
+import { buscarTareaPorId } from '../helpers/db-validators.js'
+import { validateCreator } from "../middlewares/validate-creator.js";
 
 const router = Router();
 
@@ -19,13 +22,32 @@ router.post(
 
 router.get(
     "/listar",
-    [
-    ],mostrarTodasLasTareas
+    [], mostrarTodasLasTareas
 );
 
 router.put(
     "/editarEstado/:id",
-    [], cambiarEstadoTarea
-);
+    [
+        check('estado', 'El estado es obligatorio').not().isEmpty(),
+        check('persona', 'El nombre completo de la persona es obligatorio').not().isEmpty(),
+        validarCampos,
+    ], cambiarEstadoTarea);
+
+router.put(
+    "/editar/:id",
+    [
+        check("id", "Id no valido").isMongoId(),
+        check('id').custom(buscarTareaPorId),
+        validarCampos,
+    ],editarTarea);
+
+router.delete(
+    "/eliminar",
+    [
+        check('id', 'El id es obligatorio').not().isEmpty(),
+        check('creador', 'El creador es obligatorio').not().isEmpty(),
+        validateCreator
+    ], deleteTarea);
+
 
 export default router;
