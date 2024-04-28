@@ -1,0 +1,127 @@
+.mini-ventana {
+    position: fixed;
+    top: 54%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 600px; /* Reducir el ancho de la mini ventana */
+    max-width: 90%;
+    padding: 20px;
+    background-color: #1C5560; /* Cambiar el color de fondo */
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    color: #fff; /* Cambiar el color del texto */
+    font-size: 14px; /* Tamaño de la letra del texto */
+    line-height: 1.2; /* Altura de línea */
+    height: 80vh;
+}
+
+.mini-ventana form {
+    display: flex;
+    flex-direction: column;
+}
+
+.mini-ventana input,
+.mini-ventana select,
+.mini-ventana button {
+    margin-bottom: 25px;
+}
+
+.mini-ventana p {
+    font-size: 12px; /* Tamaño de la letra del mensaje de error */
+}
+
+.dashboard-container {
+    width: 100%;
+    height: 105vh;
+}
+
+.nav-container {
+    position: absolute;
+    width: 100%;
+    height: 50px;
+    border-bottom: 2px solid rgb(41, 37, 37);
+    box-shadow: 0 0 5px 0 rgb(61, 61, 61);
+    box-sizing: border-box;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    background-color: #79AE92;
+}
+
+.nav-logo-container {
+    width: 50px;
+    height: 50px;
+    margin-left: 30px;
+}
+
+.nav-button {
+    font-size: 18px;
+    padding: 10px 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+    color: #FBFFCD;
+    background-color: #79AE92;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.nav-button:hover {
+    background-color: #1C5560;
+    color: #FBFFCD;
+}
+
+.nav-button:focus,
+.nav-button:focus-visible {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(28, 85, 96, 0.5);
+}
+
+.nav-buttons-container {
+    display: flex;
+    justify-content: center;
+    /* Alinea los botones horizontalmente en el centro */
+    gap: 20px;
+    /* Espacio entre los botones */
+}
+
+.content-container {
+    position: absolute;
+    height: calc(100vh - 50px);
+    width: calc(100vw - 200px);
+    left: 200px;
+    right: 0;
+    top: 50px;
+    overflow-x: hidden;
+}
+
+.spinner-container {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(255, 255, 255, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.spinner {
+    border: 4px solid rgba(0, 0, 0, 0.3);
+    border-top: 4px solid #000;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    animation: spin 1s linear infinite;
+}
+
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
