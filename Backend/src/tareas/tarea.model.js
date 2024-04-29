@@ -21,7 +21,7 @@ const TareaSchema = mongoose.Schema({
     estado: {
         type: String,
         required: true,
-        default: "Sin iniciar"
+        default: "SIN INICIAR"
     },
     persona: {
         type: String,
