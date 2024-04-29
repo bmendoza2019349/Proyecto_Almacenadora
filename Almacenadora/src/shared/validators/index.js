@@ -1,0 +1,5 @@
+export * from './validateDescription'
+export * from './validateEstado'
+export * from './validateFechaFinalizacion'
+export * from './validateFechaInicio'
+export * from './validateNombre'
