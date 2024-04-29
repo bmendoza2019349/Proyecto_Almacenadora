@@ -1,3 +1,4 @@
+
 import mongoose from "mongoose";
 
 const TareaSchema = mongoose.Schema({
@@ -19,9 +20,8 @@ const TareaSchema = mongoose.Schema({
     },
     estado: {
         type: String,
-        enum: ['Pendiente', 'Completado'], 
-        default: 'Pendiente', 
-        required: true
+        required: true,
+        default: "Sin iniciar"
     },
     persona: {
         type: String,
