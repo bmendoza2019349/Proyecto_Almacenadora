@@ -98,12 +98,24 @@ export const Agregar = ({ switchAddHandler }) => {
 
     const handleAgregar = (event) => {
         event.preventDefault();
-        agregar(formState.nombre.value,
-            formState.descripcion.value,
-            formState.fechaInicio.value,
-            formState.fechaFinal.value,
-            formState.estado.value,
-            formState.persona.value,);
+        
+        // Verificar si todos los campos son válidos
+        const isValidForm = Object.values(formState).every(field => field.isValid);
+    
+        // Si todos los campos son válidos, agregar la tarea y cambiar a la pestaña de listar
+        if (isValidForm) {
+            agregar(
+                formState.nombre.value,
+                formState.descripcion.value,
+                formState.fechaInicio.value,
+                formState.fechaFinal.value,
+                formState.estado.value,
+                formState.persona.value
+            );
+            
+            // Cambiar a la pestaña de listar
+            switchAddHandler();
+        }
     };
 
     const isSubmitButtonDisable = isLoading ||

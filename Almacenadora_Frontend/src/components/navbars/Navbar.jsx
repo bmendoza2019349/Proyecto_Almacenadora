@@ -3,8 +3,14 @@ import logo from "../../assets/img/logo.png";
 
 
 const NavLogo = () => {
+  const navigate = useNavigate()
+
+  const handleNavigateToListPage = () => {
+    navigate('/listar')
+  }
   return (
     <div className="nav-logo-container">
+      <button  onClick={handleNavigateToListPage}>
       <img
         className="nav-logo"
         width="100%"
@@ -12,6 +18,7 @@ const NavLogo = () => {
         src={logo}
         alt="Logo.svg"
       />
+      </button>
     </div>
   );
 };
@@ -30,30 +37,18 @@ export const Navbar = () => {
   const handleNavigateToAddPage = () => {
     navigate('/agregar')
   }
-  const handleNavigateToListPage = () => {
-    navigate('/listar')
+
+  const handleNavigateToAddPersonPage = () => {
+    navigate('/agregarPersona')
   }
 
-  const handleNavigateToEditPage = () => {
-    navigate('/editar')
-  }
-
-  const handleNavigateToDeletePage = () => {
-    navigate('/eliminar')
-  }
-  const handleNavigateToEstatePage = () => {
-    navigate('/estado')
-  }
 
   return (
     <div className="nav-container">
       <NavLogo />
       <div className="nav-buttons-container">
-        <NavButton text="Ver Tareas" onClickHandler={handleNavigateToListPage} />
-        <NavButton text="Agregar" onClickHandler={handleNavigateToAddPage} />
-        <NavButton text="Editar" onClickHandler={handleNavigateToEditPage} />
-        <NavButton text="Eliminar" onClickHandler={handleNavigateToDeletePage} />
-        <NavButton text="Cambiar Estado" onClickHandler={handleNavigateToEstatePage} />
+        <NavButton text="Agregar Tarea" onClickHandler={handleNavigateToAddPage} />
+        <NavButton text="Agregar Persona" onClickHandler={handleNavigateToAddPersonPage} />
 
       </div>
     </div>

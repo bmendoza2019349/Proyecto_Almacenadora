@@ -26,7 +26,7 @@ export const useAdd = () => {
             return toast.error(response.e?.response?.data || 'ocurrio un error al agregar tarea, intentalo otra vez')
         }
 
-        navigate('/')
+        navigate('/listar')
     }
     return {
         agregar,
