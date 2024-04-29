@@ -1,9 +1,13 @@
 import { Router } from "express";
 import { check } from "express-validator";
+<<<<<<< HEAD
 import { crearTarea, editarTarea } from "./tarea.controller.js"
 import { validarCampos } from "../middlewares/validar-campos.js";
 import { buscarTareaPorId } from '../helpers/db-validators.js'
 import { crearTarea, editarTarea, cambiarEstadoTarea, mostrarTodasLasTareas, deleteTarea } from "./tarea.controller.js"
+=======
+import { crearTarea, editarTarea, cambiarEstadoTarea, mostrarTodasLasTareas, deleteTarea  } from "./tarea.controller.js"
+>>>>>>> developer
 import { validarCampos } from "../middlewares/validar-campos.js";
 import { buscarTareaPorId } from '../helpers/db-validators.js'
 import { validateCreator } from "../middlewares/validate-creator.js";
@@ -22,6 +26,7 @@ router.post(
         validarCampos,
     ], crearTarea);
 
+<<<<<<< HEAD
 router.put(
     "/editar/:id",
     [
@@ -31,6 +36,17 @@ router.put(
     ],
     editarTarea
 );
+=======
+    router.put(
+        "/editar/:id",
+        [
+            check("id", "Id no valido").isMongoId(),
+            check('id').custom(buscarTareaPorId),
+            validarCampos,
+        ], 
+        editarTarea
+    );
+>>>>>>> developer
 
 
 router.get(
