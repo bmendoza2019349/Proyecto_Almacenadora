@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { Input } from "../Input";
-import { TextField } from '@material-ui/core';
 import {
     validateEstado,
     estadoValidateMessage,
@@ -15,7 +14,6 @@ import {
 } from "../../shared/validators";
 
 import { useAdd } from "../../shared/hooks/useAdd";
-import DateTimeInput from "../DateTimeInput";
 
 export const Agregar = ({ switchAddHandler }) => {
     const { agregar, isLoading } = useAdd();
@@ -142,7 +140,7 @@ export const Agregar = ({ switchAddHandler }) => {
                     validationMessage={descriptionValidateMessage}
                 />
                 {/* DateTimeInput para Fecha de Inicio */}
-                <DateTimeInput
+                <Input
                     field="fechaInicio"
                     label="Fecha y hora de Inicio"
                     value={formState.fechaInicio.value}
@@ -152,7 +150,7 @@ export const Agregar = ({ switchAddHandler }) => {
                     validationMessage={fechaInicioValidateMessage}
                 />
                 {/* DateTimeInput para Fecha Final */}
-                <DateTimeInput
+                <Input
                     field="fechaFinal"
                     label="Fecha y hora Final"
                     value={formState.fechaFinal.value}

@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { agregar as agregarRequest } from "../../services/api";
+import { agregar, agregar as agregarRequest } from "../../services/api";
 import toast from "react-hot-toast"
 
 export const useAdd = () => {
@@ -8,7 +8,7 @@ export const useAdd = () => {
 
     const navigate = useNavigate()
 
-    const add = async (nombre, descripcion, fechaInicio, fechaFinal, estado, persona) => {
+    const agregar = async (nombre, descripcion, fechaInicio, fechaFinal, estado, persona) => {
         setIsLoading(true)
         const response = await agregarRequest({
             nombre,
@@ -29,7 +29,7 @@ export const useAdd = () => {
         navigate('/')
     }
     return {
-        add,
+        agregar,
         isLoading
     }
 }
