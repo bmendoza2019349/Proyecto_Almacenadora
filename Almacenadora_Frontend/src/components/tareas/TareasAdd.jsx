@@ -105,6 +105,7 @@ export const Agregar = ({ switchAddHandler }) => {
             formState.fechaFinal.value,
             formState.estado.value,
             formState.persona.value,);
+            console.log('esta haciendo click')
     };
 
     const isSubmitButtonDisable = isLoading ||

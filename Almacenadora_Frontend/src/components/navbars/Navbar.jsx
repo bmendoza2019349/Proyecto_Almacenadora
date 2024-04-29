@@ -17,6 +17,8 @@ const NavLogo = () => {
 };
 
 const NavButton = ({ text, onClickHandler }) => {
+  const navigate = useNavigate()
+  navigate('/agregar')
   return (
     <span className="nav-button" onClick={onClickHandler}>
       {text}
@@ -29,6 +31,7 @@ export const Navbar = () => {
 
   const handleNavigateToAddPage = () => {
     navigate('/agregar')
+    console.log()
   }
   const handleNavigateToListPage = () => {
     navigate('/listar')

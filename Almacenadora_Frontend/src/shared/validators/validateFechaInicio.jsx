@@ -1,5 +1,5 @@
 export const validateFechaInicio = (fechaInicio) => {
-    const regex = /^\d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2}$/;
+    const regex = /^\d{2}-\d{2}-\d{4} \d{2}:\d{2}:\d{2}$/;
     return regex.test(fechaInicio);
 }
 

@@ -1,10 +1,10 @@
 import { Route, Routes } from "react-router-dom";
-import {TareasAdd} from "../tareas/TareasAdd"
+import {Agregar} from "../tareas/TareasAdd"
 export const Content = ({agregar}) => {
     return(
         <div className="content-container">
             <Routes>
-            <Route path="agregar" element={<TareasAdd/>}/>
+            <Route path="agregar" element={<Agregar/>}/>
             </Routes>
         </div>
     )
