@@ -60,6 +60,7 @@ export const editarTarea = async (req, res) => {
     }
 };
 
+
 export const mostrarTodasLasTareas = async (req, res) => {
     try {
         const tareas = await Tarea.find();

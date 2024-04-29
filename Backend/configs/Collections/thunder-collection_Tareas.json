@@ -1,0 +1,28 @@
+{
+    "clientName": "Thunder Client",
+    "collectionName": "Tareas",
+    "collectionId": "33efb4a0-5424-4e2e-815f-37f5e9e72abe",
+    "dateExported": "2024-04-23T03:52:37.473Z",
+    "version": "1.2",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "f4a58656-51cf-4ff3-872e-03021960f553",
+            "colId": "33efb4a0-5424-4e2e-815f-37f5e9e72abe",
+            "containerId": "",
+            "name": "agregarTarea",
+            "url": "http://127.0.0.1:8080/api_Almacenadora/v1/tareas/agregar",
+            "method": "POST",
+            "sortNum": 10000,
+            "created": "2024-04-23T03:26:36.616Z",
+            "modified": "2024-04-23T03:50:45.356Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\r\n  \"nombre\": \"Limpiar bandas\",\r\n  \"descripcion\": \"debe limpiar las bandas\",\r\n  \"fechaInicio\": \"2024-04-23T08:00:00\",\r\n  \"fechaFinal\": \"2024-04-23T17:30:00\",\r\n  \"estado\": \"sin iniciar\",\r\n  \"persona\": \"jose sagastume\"\r\n}",
+                "form": []
+            }
+        }
+    ],
+    "ref": "jobxl2uB8fYPvPLOqQpO-mS3048Gvgh1F3hLJ2CJCX5AHDgYMuBLjCK78wf3w_1dsxybL95_tPtos9RvjuQ5Rg"
+}
