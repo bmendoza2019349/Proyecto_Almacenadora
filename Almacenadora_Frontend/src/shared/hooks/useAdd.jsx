@@ -8,7 +8,7 @@ export const useAdd = () => {
 
     const navigate = useNavigate()
 
-    const add = async (nombre, descripcion, fechaInicio, fechaFinal, estado, persona) => {
+    const agregar = async (nombre, descripcion, fechaInicio, fechaFinal, estado, persona) => {
         setIsLoading(true)
         const response = await agregarRequest({
             nombre,
@@ -29,7 +29,7 @@ export const useAdd = () => {
         navigate('/')
     }
     return {
-        add,
+        agregar,
         isLoading
     }
 }
