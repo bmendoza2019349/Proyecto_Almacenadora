@@ -14,6 +14,10 @@ import {
 } from "../../shared/validators";
 
 import { useAdd } from "../../shared/hooks/useAdd";
+<<<<<<< HEAD
+=======
+
+>>>>>>> f188f8d6e49993c90a8406b31e6ce2477d897640
 
 export const Agregar = ({ switchAddHandler }) => {
     const { agregar, isLoading } = useAdd();
