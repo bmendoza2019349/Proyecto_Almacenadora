@@ -15,3 +15,14 @@ export const agregar = async (data) => {
         }
     }
 }
+
+export const getTareas = async() =>{
+    try {
+        return await apiClient.get('/tareas/listar')
+    } catch (e) {
+        return{
+            error:true,
+            e
+        }
+    }
+}

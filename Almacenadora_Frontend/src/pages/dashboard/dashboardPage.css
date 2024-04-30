@@ -1,3 +1,83 @@
+:root {
+    --color-principal: #2E86AB;
+    --color-secundario: #F0810F;
+    --color-fondo: #F4F4F8;
+    --color-texto: #333333;
+    --color-resaltado: #FF5733;
+}
+
+/* Estilos CSS con la paleta de colores */
+.tareas-container {
+    padding: 10px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(225px, 1fr)); /* Utiliza auto-fit en lugar de auto-fill */
+    gap: 10px; /* Espacio entre los elementos del grid */
+    width: 80%;
+    align-self: flex-end;
+}
+
+.card {
+    background-color: #f7b469; /* Color de fondo de las tarjetas */
+    border: 1px solid #DADADA; /* Borde de las tarjetas */
+    border-radius: 9px; /* Bordes redondeados de las tarjetas */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    max-height: 600px; /* Altura máxima de la tarjeta */
+    
+}
+
+.card-body {
+    padding: 8px; /* Espaciado interno del cuerpo de la tarjeta */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra de las tarjetas */
+    max-height: 600px; /* Altura máxima de la tarjeta */
+}
+
+.card-title {
+    font-size: 1.5rem; /* Tamaño de la fuente del título de la tarjeta */
+    color: #000000; /* Color del texto del título de la tarjeta */
+    text-align: center;
+}
+
+.card-text {
+    font-size: 1.2rem; /* Tamaño de la fuente del texto de la tarjeta */
+    color: #af5f0e; /* Color del texto de la tarjeta */
+    text-align: center;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center; /* Centra los elementos horizontalmente */
+}
+
+.btn-primary,
+.btn-danger {
+    color: #ffffff;
+    font-size: 1.1rem;
+    border-radius: 4px; 
+    padding: 10px;
+}
+
+.btn-primary {
+    background-color: #860000; /* Color de fondo del botón primario */
+    margin-right: 30px; /* Espacio entre el botón primario y el botón de peligro */
+}
+
+.btn-danger {
+    background-color: #2E86AB; /* Color de fondo del botón de peligro */
+}
+
+
+.btn-primary:hover {
+    background-color: #ffffff; /* Color de fondo del botón al pasar el cursor sobre él */
+    border-color: #000000; /* Color del borde del botón al pasar el cursor sobre él */
+    color: #860000;
+}
+
+.btn-danger:hover {
+    background-color: #ffffff; /* Color de fondo del botón al pasar el cursor sobre él */
+    border-color: #000000; /* Color del borde del botón al pasar el cursor sobre él */
+    color: #2E86AB;
+}
+
 .mini-ventana {
     position: fixed;
     top: 54%;
@@ -6,11 +86,11 @@
     width: 600px; /* Reducir el ancho de la mini ventana */
     max-width: 90%;
     padding: 20px;
-    background-color: #1C5560; /* Cambiar el color de fondo */
+    background-color: var(--color-principal); /* Cambiar el color de fondo */
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     color: #fff; /* Cambiar el color del texto */
-    font-size: 14px; /* Tamaño de la letra del texto */
+    font-size: 14px; /* Tamaño de la fuente */
     line-height: 1.2; /* Altura de línea */
     height: 80vh;
 }
@@ -27,7 +107,7 @@
 }
 
 .mini-ventana p {
-    font-size: 12px; /* Tamaño de la letra del mensaje de error */
+    font-size: 12px; /* Tamaño de la fuente */
 }
 
 .dashboard-container {
@@ -39,13 +119,13 @@
     position: absolute;
     width: 100%;
     height: 50px;
-    border-bottom: 2px solid rgb(41, 37, 37);
-    box-shadow: 0 0 5px 0 rgb(61, 61, 61);
+    border-bottom: 2px solid var(--color-texto); /* Cambiar el color del borde inferior */
+    box-shadow: 0 0 5px 0 var(--color-texto); /* Cambiar el color de la sombra */
     box-sizing: border-box;
     z-index: 10;
     display: flex;
     align-items: center;
-    background-color: #79AE92;
+    background-color: var(--color-principal); /* Cambiar el color de fondo */
 }
 
 .nav-logo-container {
@@ -56,33 +136,31 @@
 
 .nav-button {
     font-size: 18px;
-    padding: 10px 20px;
+    padding: 5px 5px;
     margin-left: 20px;
     margin-right: 20px;
-    color: #FBFFCD;
-    background-color: #79AE92;
+    color: var(--color-texto); /* Cambiar el color del texto */
+    background-color: var(--color-principal); /* Cambiar el color de fondo */
     border-radius: 5px;
     cursor: pointer;
     transition: all 0.3s ease;
 }
 
 .nav-button:hover {
-    background-color: #1C5560;
-    color: #FBFFCD;
+    background-color: var(--color-secundario); /* Cambiar el color de fondo al pasar el cursor sobre él */
+    color: #fff; /* Cambiar el color del texto al pasar el cursor sobre él */
 }
 
 .nav-button:focus,
 .nav-button:focus-visible {
     outline: none;
-    box-shadow: 0 0 0 3px rgba(28, 85, 96, 0.5);
+    box-shadow: 0 0 0 3px var(--color-resaltado); /* Cambiar el color de la sombra al enfocar */
 }
 
 .nav-buttons-container {
     display: flex;
     justify-content: center;
-    /* Alinea los botones horizontalmente en el centro */
-    gap: 20px;
-    /* Espacio entre los botones */
+    gap: 20px; /* Espacio entre los botones */
 }
 
 .content-container {
@@ -108,19 +186,17 @@
 
 .spinner {
     border: 4px solid rgba(0, 0, 0, 0.3);
-    border-top: 4px solid #000;
+    border-top: 4px solid var(--color-texto); /* Cambiar el color de la parte superior del borde */
     border-radius: 50%;
     width: 40px;
     height: 40px;
     animation: spin 1s linear infinite;
 }
 
-
 @keyframes spin {
     0% {
         transform: rotate(0deg);
     }
-
     100% {
         transform: rotate(360deg);
     }

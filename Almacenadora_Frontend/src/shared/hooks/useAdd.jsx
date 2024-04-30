@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { agregar, agregar as agregarRequest } from "../../services/api";
+import { agregar as agregarRequest } from "../../services/api";
 import toast from "react-hot-toast"
 
 export const useAdd = () => {
@@ -26,7 +26,7 @@ export const useAdd = () => {
             return toast.error(response.e?.response?.data || 'ocurrio un error al agregar tarea, intentalo otra vez')
         }
 
-        navigate('/listar')
+        navigate('/tareas')
     }
     return {
         agregar,

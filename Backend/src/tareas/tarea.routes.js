@@ -1,6 +1,6 @@
 import { Router } from "express";
 import { check } from "express-validator";
-import { crearTarea, editarTarea, cambiarEstadoTarea, mostrarTodasLasTareas, deleteTarea  } from "./tarea.controller.js"
+import { crearTarea, editarTarea, cambiarEstadoTarea, getTareas, deleteTarea  } from "./tarea.controller.js"
 import { validarCampos } from "../middlewares/validar-campos.js";
 import {buscarTareaPorId } from '../helpers/db-validators.js'
 import { validateCreator } from "../middlewares/validate-creator.js";
@@ -32,7 +32,7 @@ router.post(
     router.get(
         "/listar",
         [
-        ],mostrarTodasLasTareas
+        ],getTareas
     );
     
     router.put(
