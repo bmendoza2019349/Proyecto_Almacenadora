@@ -2,8 +2,11 @@ import { Router } from "express";
 import { check } from "express-validator";
 import { crearTarea, editarTarea, cambiarEstadoTarea, getTareas, deleteTarea  } from "./tarea.controller.js"
 import { validarCampos } from "../middlewares/validar-campos.js";
+import { validarEstado } from "../middlewares/validar-estado.js"
+import { validarNombreUnicoTarea } from "../middlewares/validar-nombre.js";
 import {buscarTareaPorId } from '../helpers/db-validators.js'
 import { validateCreator } from "../middlewares/validate-creator.js";
+import { validarFecha } from "../middlewares/validar-fecha.js";
 
 const router = Router();
 
@@ -14,8 +17,9 @@ router.post(
         check('descripcion', 'La descripcion es obligatorio').not().isEmpty(),
         check('fechaInicio', 'La fecha de Inicio es obligatorio').not().isEmpty(),
         check('fechaFinal', 'La fecha Final es obligatorio').not().isEmpty(),
-        check('estado', 'El estado es obligatorio').not().isEmpty(),
         check('persona', 'El nombre completo de la persona es obligatorio').not().isEmpty(),
+        validarFecha,
+        validarNombreUnicoTarea,
         validarCampos,
     ], crearTarea);
 
@@ -36,8 +40,11 @@ router.post(
     );
     
     router.put(
-        "/editarEstado/:id",
-        [], cambiarEstadoTarea
+        "/editarEstado",  
+        [
+            check('id', "Necesitamos el id de la tarea").not().isEmpty(),
+            check('estado', "Coloque el estado que quire").not().isEmpty(),validarEstado,
+        ], cambiarEstadoTarea
     );
 
     router.delete(

@@ -79,28 +79,24 @@ export const getTareas = async (req, res) => {
     }
 };
 
-
 export const cambiarEstadoTarea = async (req, res) => {
     try {
-        const { id } = req.params; 
-        const tarea = await Tarea.findById(id); 
+        const { id, estado } = req.body;
+
+        const tarea = await Tarea.findById(id);
 
         if (!tarea) {
             return res.status(404).json({ msg: "Tarea no encontrada" });
         }
 
-      
-        tarea.estado = tarea.estado === 'Pendiente' ? 'Completado' : 'Pendiente';
-
-
-        await tarea.save();
+        tarea.estado = estado.toUpperCase();
+        const tareaEditada = await tarea.save();
 
         return res.status(200).json({
-            msg: `El estado de la tarea ha sido cambiado a ${tarea.estado}`,
-            tarea
+            msg: `El estado de la tarea ha sido cambiado a ${tareaEditada.estado}`,
+            tarea: tareaEditada
         });
     } catch (error) {
-
         console.error(error);
         return res.status(500).send("No se pudo cambiar el estado de la tarea");
     }
