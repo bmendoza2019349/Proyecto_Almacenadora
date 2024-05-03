@@ -1,0 +1,86 @@
+{
+    "clientName": "Thunder Client",
+    "collectionName": "ALMACENADORA",
+    "collectionId": "6754e065-721c-4dde-befc-008f00254cbc",
+    "dateExported": "2024-05-03T10:01:14.028Z",
+    "version": "1.2",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "72b51248-c894-4fde-9005-28dad8e66eb2",
+            "colId": "6754e065-721c-4dde-befc-008f00254cbc",
+            "containerId": "",
+            "name": "AGREGAR",
+            "url": "http://127.0.0.1:8080/api_Almacenadora/v1/tareas/agregar",
+            "method": "POST",
+            "sortNum": 10000,
+            "created": "2024-05-01T22:39:51.419Z",
+            "modified": "2024-05-03T04:28:41.145Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"nombre\": \"Eda\",\n  \"descripcion\": \"12345\",\n  \"fechaInicio\": \"03-05-2024 22:24\",\n  \"fechaFinal\": \"12-05-2024 22:24\",\n  \"estado\": \"incompleto\",\n  \"persona\": \"gonzales\"\n}",
+                "form": []
+            }
+        },
+        {
+            "_id": "7a712696-176f-4289-b3d5-c6dc5b52594d",
+            "colId": "6754e065-721c-4dde-befc-008f00254cbc",
+            "containerId": "",
+            "name": "LISTAR",
+            "url": "http://127.0.0.1:8080/api_Almacenadora/v1/tareas/listar",
+            "method": "GET",
+            "sortNum": 20000,
+            "created": "2024-05-01T22:41:48.024Z",
+            "modified": "2024-05-01T22:41:48.024Z",
+            "headers": []
+        },
+        {
+            "_id": "5e53c972-e210-46fb-b5da-be5e8ce55513",
+            "colId": "6754e065-721c-4dde-befc-008f00254cbc",
+            "containerId": "",
+            "name": "EDITAR",
+            "url": "http://127.0.0.1:8080/api_Almacenadora/v1/tareas/editar/6632d57235806b2353ed17a7",
+            "method": "PUT",
+            "sortNum": 30000,
+            "created": "2024-05-01T23:08:58.712Z",
+            "modified": "2024-05-03T10:00:29.052Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"nombre\": \"Era tarea123\",\n  \"descripcion\": \"12345\",\n  \"fechaInicio\": \"2024-04-23T00:00:00.000Z\",\n  \"fechaFinal\": \"2024-04-23T11:00:00.000Z\",\n  \"persona\": \"gonzalses\"\n}",
+                "form": []
+            }
+        },
+        {
+            "_id": "4904f409-a9dd-4e2e-a553-422d06d275d9",
+            "colId": "6754e065-721c-4dde-befc-008f00254cbc",
+            "containerId": "",
+            "name": "ESTADO",
+            "url": "http://127.0.0.1:8080/api_Almacenadora/v1/tareas/editarEstado/6632d56a35806b2353ed17a4",
+            "method": "PUT",
+            "sortNum": 40000,
+            "created": "2024-05-01T23:09:59.848Z",
+            "modified": "2024-05-03T08:33:42.335Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"estado\" : \"incompleto\"\n}",
+                "form": []
+            }
+        },
+        {
+            "_id": "28aad018-2404-48c5-bf9f-bf59ca0219b6",
+            "colId": "6754e065-721c-4dde-befc-008f00254cbc",
+            "containerId": "",
+            "name": "ELIMINAR",
+            "url": "http://127.0.0.1:8080/api_Almacenadora/v1/tareas/eliminar/6632d56a35806b2353ed17a4",
+            "method": "DELETE",
+            "sortNum": 50000,
+            "created": "2024-05-01T23:33:02.380Z",
+            "modified": "2024-05-03T09:58:33.662Z",
+            "headers": []
+        }
+    ],
+    "ref": "79YkpD30Q9jiYPTUfEPg8wKknvv1YgPKWeDr8X-kVNPmPQpm83idHmcYw-7r5y8Cdb3ZIRqmJkuelgD8SmNXTw"
+}

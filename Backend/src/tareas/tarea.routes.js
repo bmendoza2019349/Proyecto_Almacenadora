@@ -18,9 +18,10 @@ router.post(
         check('fechaInicio', 'La fecha de Inicio es obligatorio').not().isEmpty(),
         check('fechaFinal', 'La fecha Final es obligatorio').not().isEmpty(),
         check('persona', 'El nombre completo de la persona es obligatorio').not().isEmpty(),
-        validarFecha,
-        validarNombreUnicoTarea,
+       // validarFecha,
+      //  validarNombreUnicoTarea,
         validarCampos,
+        validarEstado
     ], crearTarea);
 
     router.put(
@@ -40,19 +41,21 @@ router.post(
     );
     
     router.put(
-        "/editarEstado",  
-        [
-            check('id', "Necesitamos el id de la tarea").not().isEmpty(),
-            check('estado', "Coloque el estado que quire").not().isEmpty(),validarEstado,
+        "/editarEstado/:id",  
+        [   
+            check("id", "Id no valido").isMongoId(),
+            check('id').custom(buscarTareaPorId),
+            check('estado', "Ingrese el estado").not().isEmpty(),
+            validarEstado,
         ], cambiarEstadoTarea
     );
 
     router.delete(
-        "/eliminar",
+        "/eliminar/:id",
         [
             check('id', 'El id es obligatorio').not().isEmpty(),
-            check('creador', 'El creador es obligatorio').not().isEmpty(),
-            validateCreator
+          //  check('creador', 'El creador es obligatorio').not().isEmpty(),
+         // validateCreator
         ],deleteTarea);
 
 export default router;

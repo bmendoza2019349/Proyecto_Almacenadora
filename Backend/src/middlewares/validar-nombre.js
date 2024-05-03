@@ -3,9 +3,9 @@ import Tarea from '../tareas/tarea.model.js'
 export const validarNombreUnicoTarea = async (req, res, next) => {
     const { nombre } = req.body;
     try {
-        const tareaExistente = await Tarea.findOne({ nombre });
-        if (tareaExistente) {
-            return res.status(400).json({ msg: `Ya existe una tarea con este nombre: ${tareaExistente.nombre}` });
+        const tareaExistenteActiva = await Tarea.findOne({ nombre, activityStatus: true });
+        if (tareaExistenteActiva) {
+            return res.status(400).json({ msg: `Ya existe una tarea activa con este nombre: ${tareaExistenteActiva.nombre}` });
         }
         next();
     } catch (error) {
